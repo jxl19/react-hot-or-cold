@@ -5,11 +5,12 @@ import './guess-form.css';
 export default class GuessForm extends React.Component {
     onGuess(event) {
         event.preventDefault();
-
+        
         if (this.props.onGuess) {
             const value = this.input.value;
             this.props.onGuess(value);
         }
+        //to reset form when not onguess
         this.input.value = '';
     }
 
